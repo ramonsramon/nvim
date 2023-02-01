@@ -15,6 +15,11 @@ return require('packer').startup(function(use)
   use 'chrisbra/csv.vim'
   use 'folke/tokyonight.nvim'
 
+  use({
+      "iamcco/markdown-preview.nvim",
+      run = function() vim.fn["mkdp#util#install"]() end,
+  })
+
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.1',
   -- or                            , branch = '0.1.x',
@@ -42,5 +47,14 @@ return require('packer').startup(function(use)
 		  {'L3MON4D3/LuaSnip'},
 		  {'rafamadriz/friendly-snippets'},
 	  }
+  }
+
+  use {
+    'ray-x/go.nvim',
+    requires = {
+        {'ray-x/guihua.lua'},
+        {'neovim/nvim-lspconfig'},
+        {'nvim-treesitter/nvim-treesitter'}
+    }
   }
 end)
