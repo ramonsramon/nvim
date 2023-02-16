@@ -16,5 +16,5 @@ vim.opt.signcolumn = "yes"
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.cursorline = true
-vim.opt.completeopt = "menu,menuone,noselect"
+vim.opt.completeopt = "menuone,noselect"
 vim.opt.clipboard = "unnamedplus"
